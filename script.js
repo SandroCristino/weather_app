@@ -1,14 +1,14 @@
 async function getWeather(location, unit) {
   // Unit: Metric > Celsius, Imperial > Fahrenheit
   const coordinates_response = await fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=5&appid=e63db9ba1c63a5d6bcd0884dbd1ded12`,
+    `https://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=5&appid=e63db9ba1c63a5d6bcd0884dbd1ded12`,
     { mode: "cors" }
   );
   const coordinates = await coordinates_response.json();
   const coordinates_lat = coordinates[0].lat;
   const coordinates_lon = coordinates[0].lon;
   const country_response = await fetch(
-    `http://api.openweathermap.org/data/2.5/forecast?lat=${coordinates_lat}&lon=${coordinates_lon}&appid=e63db9ba1c63a5d6bcd0884dbd1ded12&units=${unit}`,
+    `https://api.openweathermap.org/data/2.5/forecast?lat=${coordinates_lat}&lon=${coordinates_lon}&appid=e63db9ba1c63a5d6bcd0884dbd1ded12&units=${unit}`,
     { mode: "cors" }
   );
   const country = await country_response.json();
