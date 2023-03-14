@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,100&family=Rubik+Iso&family=Sono:wght@200;500&display=swap");
+
+body {
+  background-image: url(./img/background.jpg);
+  background-size: cover;
+}
+
+h1 {
+  font-family: "Rubik Iso", cursive;
+  font-size: 3rem;
+}
+
+h2 {
+  font-family: "Sono", sans-serif;
+}
+
+.weather_main_box {
+  justify-content: center;
+  box-sizing: border-box;
+  min-width: 100%;
+  border-radius: 3px black solid;
+}
+
+.min_temp {
+  margin-top: -20px;
+}
+
+.max_temp {
+  margin-top: -20px;
+}
+
+.error_output {
+  width: 100%;
+  padding: 0;
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+  box-sizing: border-box;
+  margin-top: -13px;
+}
+
+svg:hover {
+  display: inline-block;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
